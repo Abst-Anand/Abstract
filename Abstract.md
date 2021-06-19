@@ -15,6 +15,10 @@ An Automatic Detection of vacant spaces in a parking lot and display of the same
 We are basically making a system with which finding places to park your car or find your car in a huge parking lot gets easier,
 Making your time saved!
 
+-JavaScript
+-
+-
+
 ## Team Members
 
  1. Anand Raj

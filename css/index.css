@@ -1,0 +1,107 @@
+
+*{
+    margin: 0;
+    padding: 0; 
+    font-style: initial;
+}
+body
+{
+    width: 100%;
+    margin-right: 15%;
+    overflow-x: hidden;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 3%;
+    position: relative;
+    border: 3px solid #73AD21;
+}
+.chim
+{
+    width: 100%;
+    min-height: 100vh;
+    background: #fff;    
+}
+.logo
+{
+    flex: 1;
+    width: 50%;
+}
+.logo img
+{
+    width: 170px;
+    cursor: pointer;
+    border-radius: 40%;
+}
+nav
+{
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+}
+.section-1
+{
+   
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y)* -1);
+    margin-right: calc(var(--bs-gutter-x)/ -2);
+    margin-left: calc(var(--bs-gutter-x)/ -2);
+}
+.section-1 .col-img
+{
+    flex: 0 0 auto;
+    width: 50%;
+}
+.section-1 .col-text h1
+{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    padding: 3%;
+
+}
+.section-1 .col-text p
+{
+    margin-top: 3%;
+    margin-bottom: 15%;
+    padding: 3%;
+
+}
+
+button
+{
+    padding: 15px 40px;
+    border: 0;
+    border-radius: 25px;
+    background: #fff;
+    color: #fff;
+    outline: none;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 10px 10px rgba(248, 93, 93, 0.2);
+}
+.row-1
+{
+    display: flex;
+    padding: 10%;
+    width: 100%;
+    background: rgba(199, 197, 197, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    line-height: 50px;
+}
+.col-1, col-2
+{
+    flex-basis: 50%;
+    overflow: hidden;
+}
+.col-2 img
+{
+    width: 100%;
+    padding: 10%;
+    display: block;
+    margin-left: 50%;
+    margin-right: 50%;
+    border-radius:30%;
+    
+}
+

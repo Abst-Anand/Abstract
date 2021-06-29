@@ -3,8 +3,7 @@ body
      margin: 0;
      padding: 0;
      font-family: sans-serif;
-     background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Funsplash.com%2Fbackgrounds%2Fapps%2Fpowerpoint&psig=AOvVaw067IOO-o5LA_5TiFIi0S61&ust=1624867241888000&source=images&cd=vfe&ved=0CAoQjRxqFwoTCICJ6Kmst_ECFQAAAAAdAAAAABAD);
-     background-image: cover;
+     background-image: linear-gradient(rgba(0,0,0,0.6),rgba(243, 99, 99, 0.6)),url(css-images/istockphoto-1188218256-612x612.jpg);
      background-position: center;
  }
  signup-btn
@@ -22,11 +21,13 @@ body
  }
  .sign-up-form
  {
-     width: 300px;
+     width: 400px;
      box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
      padding: 20px;
-     margin: 8% auto 0;
+     margin: 5% auto 0;
      text-align: center;
+     position: relative;
+     background:#fff;
  }
  .sign-up-form h1
  {
@@ -35,17 +36,17 @@ body
  }
  .input-box
  {
-     width: 100%;
+     width: 80%;
      border: 1px solid #999;
      border-radius: 20px;
-     padding: 10px;
+     padding: 12px 20px;
      margin: 10px 0;
-     outline: none;
+     box-sizing: border-box;
  }
  button
  {
      color:#fff;
-     width: 100%;
+     width: 70%;
      padding: 10px;
      border-radius: 20px;
      font-size: 15px;

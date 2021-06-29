@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    font-family: sans-serif;
+}
+.app-container
+{
+    height: 600px;
+    width: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    background-image: linear-gradient(rgb(196, 152, 230),#403746);
+
+ }
+ .top-box
+ {
+     height: 150px;
+     background-color: rgba(136, 90, 90, 0.6);
+     border-bottom-left-radius: 80px;
+     border-bottom-right-radius: 80px;
+ }
+ .top-box p
+ {
+     text-align: center;
+     padding-top: 50px;
+     color: #fff;
+ }
+ .payment-option-btn
+ {
+     color: ivory;
+     margin: 25px 25px ;
+     height: 40px;
+     width: 290px;
+     background-color: #1c8adb;
+     color:#fff;  
+     border-radius: 80px;
+     font-size: 15px;
+     border: none;
+     outline: none;
+     cursor: pointer;
+     
+
+ }

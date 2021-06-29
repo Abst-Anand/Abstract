@@ -1,8 +1,3 @@
-<p>Click the button to get your coordinates.</p>
-
-<button onclick="getLocation()">Try It</button>
-
-<p id="demo"></p>
 
 <script>
 var x = document.getElementById("demo");

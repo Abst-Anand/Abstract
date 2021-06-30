@@ -1,4 +1,5 @@
 <html>
+  <head>
 <div class="popup">
     <h1 class="head">User Interface</h1>
     
@@ -7,6 +8,8 @@
     <button onclick="getLocation()">Try It</button>
     
     <p id="demo"></p>
+  </head>
+  <body>
     
 <script>
     var x = document.getElementById("demo");
@@ -39,7 +42,11 @@
           x.innerHTML = "An unknown error occurred."
           break;
       }
+      document.getElementById("demo").innerHTML="Latitude";
+      document.getElementById("demo").innerHTML="Longitude";
+      document.getElementById("demo").innerHTML=x.innerHTML;
     }
     </script>
+  </body>
 </div>
 </html>    

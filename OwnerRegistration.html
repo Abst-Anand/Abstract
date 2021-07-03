@@ -10,16 +10,17 @@
     
     <div class="owner-form">     
 
-    <form action="OwnerInterface.html" method="POST">
-        <input type="firstname" class="input-box" placeholder="First Name" required><br>
-        <input type="lastname" class="input-box" placeholder="Last Name" required><br>
-        <input type="number" class="input-number" placeholder="Mobile Number" required><br>
-        <input type="number" class="input-number" placeholder="Total Holding Capacity" required><br>
+    <form action="php/OwnerRegistration.php" method="POST">
+        <input type="firstname" class="input-box" placeholder="Parking Lot Name" name="name" required><br>
+        <input type="lastname" class="input-box" placeholder="Owner Name" name="owner_name" required><br>
+        <input type="email" class="input-box" placeholder="Email" name="email" required><br>
+        <input type="number" class="input-number" placeholder="Mobile Number" name="mobile_number" required><br>
+        <input type="number" class="input-number" placeholder="Total Holding Capacity" name="holding_capacity" required><br>
 
        Availability Time:<br><input type="time" class="input-time" placeholder="Time" required>To
         <input type="time" class="input-time" placeholder="Time" required> <br>
         <input type="number" class="input-number" placeholder="Type of Vehicle" required><br>
-        <input type="number" class="input-number" placeholder="Desired Amount" required><br>
+        <input type="number" class="input-number" placeholder="Desired Amount" name="desired_amount" required><br>
         <p><span><input type="checkbox" required></span> I agree to the  <a href="OwnerAgreement.html">Terms of Agreement</a></p>
         <button type="submit" class="submit">Submit</button><br>
         <button type="reset" class="submit"> Reset</button>

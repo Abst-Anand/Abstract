@@ -1,0 +1,95 @@
+body
+ {
+     margin: 0;
+     padding: 0;
+     font-family: sans-serif;
+     background-position: center;
+ }
+ .img
+ {
+     border-radius: 5%;
+     width: 50%;
+     padding: 10px;
+     margin-left: 50px;
+ }
+ .head
+ {
+     text-align: center;
+ }
+ .side-menu
+ {
+    width: 15%;
+    box-shadow: 0 0 2px 0 rgba(224, 116, 116, 0.3);
+    padding: 20px;
+    margin-left: 0%;
+    background: white;
+ }
+ .col li
+ {
+     padding: 10px;
+     margin: 4px;
+ }
+ .side-menu .center
+ {
+    width: 300px;
+    box-shadow: 0 0 3px 0 rgba(224, 116, 116, 0.3);
+    padding: 20px;
+    margin: 8% auto 0;
+    margin-top: 0;
+    background: white;
+ }
+ .side-menu .center 
+ {
+    height: 22%;
+    text-align: center;
+    margin-top: 0%;
+    margin-left: 200%;
+    padding: 3%;
+
+ }
+ .side-menu .center .text
+ {
+     margin-top: 5%;
+     font-size: 20px;
+ }
+ button
+ {
+    padding: 15px 40px;
+    border: 0;
+    border-radius: 25px;
+    background: rgb(75, 75, 75);
+    color: #fff;
+    outline: none;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 10px 10px rgba(248, 93, 93, 0.2);
+ }
+
+
+ .table-box
+ {
+     margin: 50px auto;
+ } 
+ .table-row
+ {
+     display: table;
+     width: 80%;
+     margin: 10px auto;
+     font-family: sans-serif;
+     background: transparent;
+     padding: 12px 0;
+     color: #555;
+     font-size: 13px;
+     box-shadow: 0 1px 4px 0 rgba(0, 0, 50, 0.3);
+     background-color: skyblue;
+ }
+ .table-cell
+ {
+     display: table-cell;
+     width: 25%;
+     text-align: center;
+     padding: 4px 0;
+     border-right: 1px solid #d6d4d4;
+     vertical-align: middle;
+     
+ }

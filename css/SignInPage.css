@@ -4,6 +4,7 @@ body
      padding: 0;
      font-family: sans-serif;
      background-position: center;
+     height:max-content;
  }
  .sign-in
  {

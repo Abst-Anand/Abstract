@@ -1,3 +1,5 @@
+
+
 <html>
     <head>
         <title>Log in</title>
@@ -8,13 +10,15 @@
         <div class="sign-in">
             <img src="Images/download (1).jpg">
             <h1>Sign In</h1>
-            <form action="UserInterface.html" method="POST">
-                <input type="email" class="input-box" placeholder="Enter Email" required>
-                <input type="password" class="input-box" placeholder="Password" required>  
-                <button type="submit" class="signin-btn" onclick="validate">Sign In</button>
+            <form action="php/recordFetch_SignIn.php" method="POST">
+                <input type="email" class="input-box" placeholder="Enter Email" name="email" required>
+                <input type="password" class="input-box" placeholder="Password" name="password" required>  
+                <button type="submit" class="signin-btn"  name= "submit">Sign In</button>
 
             </form>
         </div>
 
     </body>
  </html>
+
+ 

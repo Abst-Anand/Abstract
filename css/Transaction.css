@@ -5,6 +5,7 @@
 body
 {
     font-family: sans-serif;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(243, 99, 99, 0.6)),url(css-images/istockphoto-1188218256-612x612.jpg);
 }
 .app-container
 {

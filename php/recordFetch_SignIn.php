@@ -25,12 +25,12 @@
         
           
         echo "LogIn Success!";
-        include "C:/xampp/htdocs/Abstract/UserInterface.php ";
+        header ("Location: https://localhost/Abstract/UserInterface.php", true, 301 );
         //open homepage
     }
     else
     {
-        echo "F";
+        echo "Invalid Credentials";
     }
   
    }

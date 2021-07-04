@@ -68,16 +68,17 @@ body
 
  .table-box
  {
-     margin: 50px auto;
+     margin: 30px auto;
+     width: 90%;
  } 
  .table-row
  {
      display: table;
-     width: 80%;
+     width: 90%;
      margin: 10px auto;
      font-family: sans-serif;
      background: transparent;
-     padding: 12px 0;
+     padding: 9px 0;
      color: #555;
      font-size: 13px;
      box-shadow: 0 1px 4px 0 rgba(0, 0, 50, 0.3);
@@ -86,10 +87,17 @@ body
  .table-cell
  {
      display: table-cell;
-     width: 25%;
+     width: 30%;
      text-align: center;
      padding: 4px 0;
      border-right: 1px solid #d6d4d4;
      vertical-align: middle;
      
+ }
+ .map-position
+ {
+     width: 100%;
+     text-align: center;
+     
+
  }

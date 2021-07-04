@@ -1,30 +1,9 @@
-<html>
-
-<head>
-  <title>UserInterface</title>
-  <link rel="stylesheet" href="css/UserInterface.css">
-  
-  <div class="side-menu">
-
-    <h1 class="head">Park</h1>
-    <img src="Images/download (1).jpg" class="img"><br><br>
-    <script src="http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp"></script>
-    <div class="col">
-      <li><a href="#"> Profile </a></li>
-      <li><a href="#"> Previous Bookings </a></li>
-      <li><a href="#"> Payment Methods </a></li>
-      <li><a href="#"> Contact Us </a></li>
-      <li><a href="#"> Follow Us </a></li>
-      <li><a href="#"> Help </a></li>
-    </div>
-</div>
-
-    <div class="center">
-      <div class="text"></p>
-        <button class="loc-btn" onclick="" >Share Your Location</button>
-        <li class="loc-btn" style="padding 1%">Right Click to remove the marker!</li>
-        <div class="map-position">
-        <?php
+<div class="popup">
+    <h1 style="text-align: center;">Insert Your Location</h1>
+    <p style="text-align: center;">-Zoom to your Location.</p><br>
+    <p style="text-align: center;">-Click on the marker.</p><br>
+    <p style="text-align: center;">-Add Name of your Parking Lot. </p>
+    <?php
 include_once 'header.php';
 include 'locations_model.php';
 //get_unconfirmed_locations();exit;
@@ -82,7 +61,7 @@ include 'locations_model.php';
         /**
          * Binds click event to given map and invokes a callback that appends a new marker to clicked location.
          */
-            var addMarker = google.maps.event.addListener(map, 'click', function(e) {
+        var addMarker = google.maps.event.addListener(map, 'click', function(e) {
             var lat = e.latLng.lat(); // lat of clicked point
             var lng = e.latLng.lng(); // lng of clicked point
             var markerId = getMarkerUniqueId(lat, lng); // an that will be used to cache this marker in markers object.
@@ -99,7 +78,6 @@ include 'locations_model.php';
                 "            <tr><td></td><td><input type='button' value='Save' onclick='saveData("+lat+","+lng+")'/></td></tr>\n" +
                 "        </table>\n" +
                 "    </div>"
-                
             });
             markers[markerId] = marker; // cache marker in markers object
             bindMarkerEvents(marker); // bind right click event to marker
@@ -110,7 +88,7 @@ include 'locations_model.php';
          * Binds  click event to given marker and invokes a callback function that will remove the marker from map.
          * @param {!google.maps.Marker} marker A google.maps.Marker instance that the handler will binded.
          */
-  /*      var bindMarkerinfo = function(marker) {
+        var bindMarkerinfo = function(marker) {
             google.maps.event.addListener(marker, "click", function (point) {
                 var markerId = getMarkerUniqueId(point.latLng.lat(), point.latLng.lng()); // get marker id by using clicked point's coordinate
                 var marker = markers[markerId]; // find marker
@@ -120,7 +98,7 @@ include 'locations_model.php';
                 // removeMarker(marker, markerId); // remove it
             });
         };
- */
+
         /**
          * Binds right click event to given marker and invokes a callback function that will remove the marker from map.
          * @param {!google.maps.Marker} marker A google.maps.Marker instance that the handler will binded.
@@ -227,154 +205,3 @@ include 'locations_model.php';
 include_once 'footer.php';
 
 ?>
-      </div>
-    </div>
-  </div>
-      </div>
-
-</head>
-
-<body>
-
-  <div class="table-box">
-    <h1 style="text-align: center;">Parking Lots:</h1><br>
-    <div class="table-row">
-      <div class="table-cell">
-        <p>Parking Lot Name</p>
-      </div>
-      
-      <div class="table-cell">
-        <p>Availability</p>
-      </div>
-
-      <div class="table-cell">
-        <p>Amount</p>
-      </div>
-      <div class="table-cell">
-        <p>Operation</p>
-      </div>
-    </div>
-  </div>
-     
-  <div>
-    <?php
-
-//echo "$email";
-$conn = new mysqli('localhost','root','','parkinginfo');
-
-
-$selectquery = "SELECT * from p_lots ";
-
-$query = mysqli_query($conn,$selectquery);
-
-$nums = mysqli_num_rows($query);
-
-$res = mysqli_fetch_array($query);
-$click=0;
-if(isset($_SESSION['book-click']))
-{
-  $click++;
-} 
-
-while($res = mysqli_fetch_array($query) )
-  {
-    ?>
-    <div class="table-row">
-      <div class="table-cell">
-        <p> <?php echo $res['name']; ?> </p>
-      </div>
-   
-      <div class="table-cell">
-        <p> <?php echo( ($res['holding_capacity']) - $click);?> </p>
-      </div>
-      <div class="table-cell">
-        <p> <?php echo $res['desired_amount'];?> </p>
-      </div>
-      <div class="table-cell">
-        <p  name="book-click"><a href="Transaction.html">Book Now</a></p>
-      </div>
-    </div>
-    <?php
-      }
-    ?>
-
-   
-  </div>
-       
-      
-
-    
-
-
-  <script>
-    //var x = document.getElementById("location");
-
-    //function getLocation() {
-     // if (navigator.geolocation) {
-      //  navigator.geolocation.getCurrentPosition(showPosition, showError);
-      //} else {
-        //x.innerHTML = "Geolocation is not supported by this browser.";
-      //}
-    }
-
-    /*function showPosition(position) {
-      x.innerHTML = "Latitude: " + position.coords.latitude +
-        "<br>Longitude: " + position.coords.longitude;
-    }
-
-    function showError(error) {
-      switch (error.code) {
-        case error.PERMISSION_DENIED:
-          x.innerHTML = "User denied the request for Geolocation."
-          break;
-        case error.POSITION_UNAVAILABLE:
-          x.innerHTML = "Location information is unavailable."
-          break;
-        case error.TIMEOUT:
-          x.innerHTML = "The request to get user location timed out."
-          break;
-        case error.UNKNOWN_ERROR:
-          x.innerHTML = "An unknown error occurred."
-          break;
-      }
-      document.getElementById("location").innerHTML = "Latitude";
-      document.getElementById("location").innerHTML = "Longitude";
-      //document.getElementById("location").innerHTML = x.innerHTML;
-
-
-
-
-      let map;
-
-function initMap() {
-  map = new google.maps.Map(document.getElementById("location"), {
-    zoom: 2,
-    center: new google.maps.LatLng(document.getElementById("location").innerHTML, document.getElementById("location").innerHTML ),
-    mapTypeId: "terrain",
-  });
-  // Create a <script> tag and set the USGS URL as the source.
-  const script = document.createElement("script");
-  // http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp
-  script.src =
-    "https://developers.google.com/maps/documentation/javascript/examples/json/earthquake_GeoJSONP.js";
-  document.getElementsByTagName("head")[0].appendChild(script);
-}
-
-const eqfeed_callback = function (results) {
-  for (let i = 0; i < results.features.length; i++) {
-    const coords = results.features[i].geometry.coordinates;
-    const latLng = new google.maps.LatLng(coords[1], coords[0]);
-    new google.maps.Marker({
-      position: latLng,
-      map: map,
-    });
-  }
-};
-      
-    }
-    */
-  </script>
-</body>
-</div>
-
-</html>

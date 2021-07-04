@@ -18,7 +18,7 @@ if($conn->connect_error){
     $stmt->bind_param("sssiii",$name,$owner_name,$email,$mobile_number,$holding_capacity,$desired_amount);
     $stmt->execute();
     echo "Data Collected!!! ";
-    include "C:/xampp/htdocs/Abstract/OwnerInterface.html "; 
+    header ("Location: https://localhost/Abstract/OwnerInterface.html", true, 301 );
     $stmt->close();
     $conn->close();
 }
